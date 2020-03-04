@@ -1,0 +1,45 @@
+@mixin parallax($property) {
+    height: $property; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin paddmarg {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin backgroundborder {
+    border-style: double none;
+    border-width: 12px;
+    border-color: $beigeish; 
+    
+}
+
+@mixin headerborder {
+    border-style: none none double none;
+    border-width: 12px;
+    border-color: $beigeish; 
+    
+}
+
+@mixin footerborder {
+    border-style: solid none none none;
+    border-width: 3px;
+    border-color: $beigeish; 
+    
+}
+
+@mixin container {
+    font-size: 2.2em;
+    height: 90vh;
+    width: 100%;
+    max-width: 100%;
+}
+
+// @mixin stroke {
+//     -webkit-text-stroke: black;
+//     stroke: black;
+// }
