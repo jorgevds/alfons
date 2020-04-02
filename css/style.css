@@ -87,7 +87,14 @@ main {
       margin-left: 2%;
       display: grid;
       grid-template-columns: 25% 35% 15% 25%;
-      grid-template-rows: 10% 10% 45% 35%; }
+      grid-template-rows: 10% 15% 45% 30%; }
+      @media screen and (max-width: 768px) {
+        main .parallax-1 .grid-1 {
+          display: inline-block;
+          text-align: center;
+          padding: 20% 0;
+          margin: 0;
+          line-height: 3; } }
       main .parallax-1 .grid-1 .full-row-1 {
         grid-column: 1 / -1;
         grid-row: 2/ -2; }
@@ -96,12 +103,6 @@ main {
       main .parallax-1 .grid-1 .item-2 {
         line-height: 1.3;
         grid-area: 4 / 1 / 4 / 3; }
-      @media screen and (max-width: 768px) {
-        main .parallax-1 .grid-1 {
-          display: inline-block;
-          text-align: center;
-          padding: 20% 0;
-          margin: 0; } }
   main .flex-1 {
     font-size: 2.2em;
     min-height: 90vh;
@@ -117,25 +118,28 @@ main {
     height: auto; }
     main .flex-1 .column-1 {
       width: 60%;
-      font-size: 2vw;
       padding: 10px;
       text-shadow: 3px 3px 3px black; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 425px) {
         main .flex-1 .column-1 {
-          font-size: 30px; } }
-      main .flex-1 .column-1 #flex-1 {
-        font-size: 4vw; }
-      main .flex-1 .column-1 #flex-p-1 {
-        margin-top: 12%; }
+          width: auto; } }
+      main .flex-1 .column-1 a {
+        text-decoration: none;
+        font-style: italic;
+        font-size: 115%; }
       main .flex-1 .column-1 #flex-1, main .flex-1 .column-1 #flex-2, main .flex-1 .column-1 #flex-p-1 {
+        margin: 8%;
         margin-left: 10%; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 425px) {
           main .flex-1 .column-1 #flex-1, main .flex-1 .column-1 #flex-2, main .flex-1 .column-1 #flex-p-1 {
-            margin: 5px 0px; } }
+            text-align: center; } }
       main .flex-1 .column-1 #foto-1 {
         width: 100%;
         height: auto;
         border: 1px solid #ffe0b3; }
+        @media screen and (max-width: 425px) {
+          main .flex-1 .column-1 #foto-1 {
+            display: none; } }
   main .parallax-2 {
     height: auto;
     background-attachment: fixed;
@@ -151,7 +155,14 @@ main {
       margin-left: 2%;
       display: grid;
       grid-template-columns: 25% 35% 15% 25%;
-      grid-template-rows: 10% 10% 20% 60%; }
+      grid-template-rows: 10% 15% 20% 55%; }
+      @media screen and (max-width: 768px) {
+        main .parallax-2 .grid-2 {
+          display: inline-block;
+          text-align: center;
+          padding: 20% 0;
+          margin: 0;
+          line-height: 3; } }
       main .parallax-2 .grid-2 .full-row-2 {
         grid-column: 1 / -1;
         grid-row: 2 / 2; }
@@ -160,12 +171,6 @@ main {
       main .parallax-2 .grid-2 .item-4 {
         line-height: 1.3;
         grid-area: 4 / 1 / 4 / 3; }
-      @media screen and (max-width: 768px) {
-        main .parallax-2 .grid-2 {
-          display: inline-block;
-          text-align: center;
-          padding: 20% 0;
-          margin: 0; } }
     main .parallax-2 .flex-banner {
       margin-top: 10%;
       position: inline-block; }
@@ -268,7 +273,7 @@ footer {
     footer nav ul li {
       font: 400 20px "Playball", Arial, Helvetica, sans-serif;
       display: inline-block;
-      padding: 20 0;
+      padding: 10 0;
       margin: 0;
       width: 100%;
       text-align: center; }
@@ -280,7 +285,7 @@ footer {
           font-size: 5vw; } }
       @media screen and (max-width: 768px) {
         footer nav ul li {
-          padding: 10 0; } }
+          padding: 5 0; } }
     footer nav ul li a {
       color: #c69a0c;
       display: block;
