@@ -1,5 +1,5 @@
 @mixin parallax($property) {
-    height: $property;
+    min-height: $property;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 
 @mixin four-kay-headers { 
     @media screen and (max-width: 2560px) {
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
     @media screen and (max-width: 425px) {
         font-size: 5vw;
@@ -50,10 +50,19 @@
 
 @mixin four-kay-text { 
     @media screen and (max-width: 2560px) {
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     @media screen and (max-width: 425px) {
         font-size: 5vw;
+    }
+}
+
+@mixin form-text {
+    @media screen and (max-width: 2560px) {
+        font-size: 1.5vw;
+    }
+    @media screen and (max-width: 425px) {
+        font-size: 3vw;
     }
 }
 
