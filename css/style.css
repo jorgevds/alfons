@@ -295,6 +295,8 @@ main {
         margin-left: 7%; }
         @media screen and (max-width: 768px) {
           main .parallax-2 .flex-banner .flex-2 {
+            display: inline;
+            text-align: center;
             margin: 0;
             padding: 5; } }
         main .parallax-2 .flex-banner .flex-2 .column-2 {
@@ -313,10 +315,11 @@ main {
             cursor: pointer; }
             @media screen and (max-width: 768px) {
               main .parallax-2 .flex-banner .flex-2 .column-2 button {
-                margin-top: 20px;
-                background: none;
-                border: none;
-                overflow: visible; } }
+                margin-top: 8%;
+                background-color: #300e03;
+                width: 50%; } }
+            main .parallax-2 .flex-banner .flex-2 .column-2 button a {
+              text-decoration: none; }
 
 footer {
   list-style: none;

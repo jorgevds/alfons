@@ -193,6 +193,8 @@
                                 align-items: center;
                                 margin-left: 7%;
                                 @media screen and (max-width: 768px) {
+                                    display: inline;
+                                    text-align: center;
                                     margin: 0;
                                     padding: 5;
                             }
@@ -214,17 +216,15 @@
                                         border: 1px solid $gold;
                                         border-radius: 4px;
                                         cursor: pointer;
-                                            @media screen and (max-width: 768px) {
-                                                margin-top: 20px;
-                                                background: none;
-                                                border: none;
-                                                overflow: visible;
-                                            }
-                                            @media screen and (max-width: 425px) {
-                                                
-                                
-                                
-                                            } 
+                                        @media screen and (max-width: 768px) {
+                                            margin-top: 8%;
+                                            background-color: $brown;
+                                            width: 50%;
+                                        }
+
+                                        a {
+                                            text-decoration: none;
+                                        }
                                     }
                                 } 
                             }
