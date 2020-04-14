@@ -1,3 +1,5 @@
+// DOCSTYLE mixins
+
 @mixin parallax($property) {
     min-height: $property;
     background-attachment: fixed;
@@ -12,24 +14,8 @@
 }
 
 @mixin backgroundborder {
-    border-style: double none;
-    border-width: 12px;
-    border-color: $beigeish; 
-    
-}
-
-@mixin headerborder {
-    border-style: none none double none;
-    border-width: 12px;
-    border-color: $beigeish; 
-    
-}
-
-@mixin footerborder {
-    border-style: solid none none none;
-    border-width: 3px;
-    border-color: $beigeish; 
-    
+    border-top: 12px double $beigeish;
+    border-bottom: 12px double $beigeish;
 }
 
 @mixin container {
@@ -66,6 +52,33 @@
     }
 }
 
+@mixin bestel-card { 
+    @media screen and (max-width: 2560px) {
+        font-size: 1.9vw;
+    }
+    @media screen and (max-width: 1024px) {
+        font-size: 2.3vw;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 2.8vw;
+    }
+    @media screen and (max-width: 425px) {
+        font-size: 5vw;
+    }
+}
+
+@mixin bestel-link { 
+    @media screen and (max-width: 2560px) {
+        font-size: 1.4vw;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 1.8vw;
+    }
+    @media screen and (max-width: 425px) {
+        font-size: 3.5vw;
+    }
+}
+
 @mixin grid-off {
     @media screen and (max-width: 768px) {
         display: inline-block;
@@ -75,8 +88,3 @@
         line-height: 3;
     }
 }
-
-// @mixin stroke {
-//     -webkit-text-stroke: black;
-//     stroke: black;
-// }
