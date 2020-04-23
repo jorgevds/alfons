@@ -1,19 +1,18 @@
 // DOCTYPE partial scss
 
 .contact {
-text-align: center;
-padding-top: 5%; 
+  text-align: center;
+  padding-top: 5%;
 }
 
 .contact-overloop {
-padding: 20 35px;
+  padding: 20 35px;
 }
 
 .contact-form {
-    margin-top: 6%;
+  margin-top: 6%;
 
-
-    .form {
+  .form {
     padding: 20px 10px;
     border-radius: 5px;
     text-align: left;
@@ -21,62 +20,69 @@ padding: 20 35px;
     height: auto;
     width: 65%;
     font-family: "Playball", Arial, Helvetica, sans-serif;
-    @include form-text;
+    @include four-kay-text;
     color: $gold;
 
     .form-input {
+      border-radius: 4px;
+      background-color: $brown;
+      @media screen and (max-width: 2560px) {
+        padding: 25px 20px;
+      }
+      @media screen and (max-width: 1600px) {
+        padding: 20px 10px;
+      }
+
+      
+      label {
+        font-size: 1.3em;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        display: inline-block;
+        width: 100%;;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid #ccc;
         border-radius: 4px;
-        background-color: $brown;
-        padding: 25px 10px;
-
-
-        label {
-            font-size: 1.3em;
+        margin: 12 0 25 0;
+        font-size: inherit;
+        @media screen and (max-width: 768px) {
+          padding: 10px 15px;
+          margin-top: 8;
         }
-        
-        input[type=text], input[type=email], textarea {
-            display: inline-block;
-            width: 100%;
-            box-sizing: border-box;
-            padding: 10px;
-            border: 1px solid #ccc; 
-            border-radius: 4px;
-            margin: 12 0 25 0; 
-            font-size: inherit;
-                @media screen and (max-width: 768px) {
-                    padding: 10px 15px;
-                    margin-top: 8;
-            }
-        }
+      }
 
-        textarea {
-            padding: 0;
-            height: 20%;
-            resize: inherit;
-            font-size: inherit;
-                @media screen and (max-width: 768px) {
-                    height: 15%;
-                    margin-bottom: 0;
-            }
+      textarea {
+        padding: 0;
+        height: 20%;
+        resize: inherit;
+        font-size: inherit;
+        @media screen and (max-width: 768px) {
+          height: 50%;
+          margin-bottom: 0;
         }
+      }
     }
-        
-        input[type=submit] {
-        font-size: 1.7em;
-        background-color: $brown;
-        color: $gold;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid $gold;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-top: 5%;
-        margin-bottom: 20%;
-        font-family: inherit;
-            @media screen and (max-width: 768px) {
-                margin-top: 20px;
-                overflow: visible;
-            }
-        }
+
+    input[type="submit"] {
+      font-size: 1.7em;
+      background-color: $brown;
+      color: $gold;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid $gold;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5%;
+      margin-bottom: 20%;
+      font-family: inherit;
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+        overflow: visible;
+      }
     }
+  }
 }

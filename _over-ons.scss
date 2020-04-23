@@ -1,53 +1,52 @@
 // DOCTYPE partial scss
 
 .over-ons {
-    text-align: center;
-    padding: 4%;
+  text-align: center;
+  padding: 4%;
 
-    img {
-        width: 35%;
-        height: auto;
-        position: relative;
-        display: block;
-        padding: 0% 3%;
+  img {
+    width: 35%;
+    height: auto;
+    position: relative;
+    display: block;
+    padding: 0% 3%;
+  }
+
+  h1 {
+    font-size: 5vw;
+    padding-bottom: 4%;
+    @media screen and (max-width: 425px) {
+      font-size: 7vw;
+    }
+  }
+
+  .over-ons-2 {
+    padding-bottom: 4%;
+
+    h2 {
+      padding-bottom: 4%;
     }
 
-        h1 {
-            font-size: 5vw;
-            padding-bottom: 4%;
-            @media screen and (max-width: 425px) {
-                font-size: 7vw;
-            }
-        }
+    h3 {
+      text-align: left;
+    }
 
-            .over-ons-2 {
-                padding-bottom: 4%;
+    img {
+      float: right;
+    }
+  }
 
-                h2 {
-                    padding-bottom: 4%;
-                }
+  .over-ons-3 {
+    h2 {
+      padding-bottom: 4%;
+    }
 
-                h3 {
-                text-align: left;
-                }
+    h3 {
+      text-align: right;
+    }
 
-                img {
-                    float: right;
-                }
-            }
-
-            .over-ons-3 {
-
-                h2 {
-                    padding-bottom: 4%;
-                }
-
-                h3 {
-                text-align: right;
-                }
-
-                img {
-                    float: left;
-                }
-            }
-        }
+    img {
+      float: left;
+    }
+  }
+}
