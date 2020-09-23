@@ -13,20 +13,22 @@
   }
 
   h1 {
-    font-size: 5vw;
-    padding-bottom: 4%;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
     @media screen and (max-width: 425px) {
-      font-size: 7vw;
+      font-size: 3rem;
     }
   }
 
-  .over-ons-2 {
-    padding-bottom: 4%;
+  .over-ons-2,
+  .over-ons-3 {
+    padding-bottom: 2.5rem;
 
     h2 {
-      padding-bottom: 4%;
+      padding-bottom: 2rem;
     }
-
+  }
+  .over-ons-2 {
     h3 {
       text-align: left;
     }
@@ -37,10 +39,6 @@
   }
 
   .over-ons-3 {
-    h2 {
-      padding-bottom: 4%;
-    }
-
     h3 {
       text-align: right;
     }

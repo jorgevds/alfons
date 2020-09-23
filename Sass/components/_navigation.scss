@@ -1,0 +1,70 @@
+header {
+  @include four-kay-headers;
+  letter-spacing: 4px;
+  font-style: italic;
+  background-color: $brown;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+  }
+
+  nav {
+    border-bottom: 12px double $beigeish;
+
+    ul {
+      display: flex;
+
+      li {
+        margin: auto;
+        display: inline-block;
+        padding: 20px;
+        width: 100%;
+        @include four-kay-text;
+        @media screen and (max-width: 425px) {
+          padding: 10px 0;
+        }
+      }
+
+      li a {
+        color: $gold;
+        display: inline;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+footer {
+  list-style: none;
+  background-color: $brown;
+
+  nav {
+    border-top: 3px solid $beigeish;
+
+    ul {
+      @media screen and (max-width: 768px) {
+        display: flex;
+      }
+
+      li {
+        font: 400 20px "Playball", Arial, Helvetica, sans-serif;
+        display: inline-block;
+        padding: 8px 0;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        @include four-kay-text;
+        @media screen and (max-width: 768px) {
+          padding: 20px 0;
+        }
+      }
+
+      li a {
+        color: $gold;
+        display: block;
+        text-decoration: none;
+      }
+    }
+  }
+}

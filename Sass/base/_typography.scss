@@ -1,0 +1,16 @@
+.leidende-tekst {
+  font-family: "Playball", Arial, Helvetica, sans-serif;
+  color: $gold;
+  text-shadow: 3px 3px 3px black;
+  @include four-kay-headers;
+}
+.lopende-tekst {
+  color: white;
+  -webkit-text-stroke: 1px black;
+  @include four-kay-text;
+}
+
+.doorlopende-tekst {
+  color: $beigeish;
+  @include four-kay-text;
+}

@@ -1,0 +1,9 @@
+.parallax-1 {
+  @include parallax(90vh);
+  background-image: url("../img/grid.jpg");
+}
+
+.parallax-2 {
+  @include parallax(auto);
+  background-image: url("../img/flex.jpg");
+}
