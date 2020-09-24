@@ -1,4 +1,4 @@
-// DOCSTYLE mixins
+// DOCSTYLE partial scss: abstracts
 
 // Layout
 @mixin parallax($property) {
@@ -20,19 +20,20 @@
 }
 
 @mixin container {
-  font-size: 2.2em;
   min-height: 90vh;
   width: 100%;
   max-width: 100%;
 }
 
+// Disables grid for lower resolutions and replaces with flexbox
 @mixin grid-off {
   @media screen and (max-width: 768px) {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20% 0;
     margin: 0;
-    line-height: 3;
   }
 }
 

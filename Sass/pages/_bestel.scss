@@ -1,4 +1,4 @@
-// DOCTYPE partial scss
+// DOCTYPE partial scss: pages
 
 .card-container {
   display: grid;
@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 4%;
+  padding: 2rem;
   @media screen and (max-width: 425px) {
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   }
@@ -20,11 +20,10 @@
     min-height: 100vh;
     height: auto;
     margin: 0;
-    margin-bottom: 2%;
+    margin-bottom: 1rem;
     background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 6px;
-
     overflow: hidden;
     @media screen and (max-width: 425px) {
       min-height: 60vh;
@@ -41,8 +40,10 @@
         min-height: 30vh;
       }
     }
+
     .card--text {
       height: 80px;
+
       .card--title,
       .card--price {
         @include four-kay-text;
@@ -70,8 +71,6 @@
       width: 100%;
       padding: 15px 10px;
       @include bestel-link;
-      @media screen and (max-width: 425px) {
-      }
     }
   }
 }

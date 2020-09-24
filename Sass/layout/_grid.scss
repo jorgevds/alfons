@@ -1,7 +1,9 @@
+// DOCTYPE partial scss: layout
+// First grid is the first content container underneath the header
 .grid-1 {
   @include container;
-  @include grid-off;
-  margin-left: 2%;
+  @include grid-off; /* This only applies to lower screen resolutions, starting at tablets */
+  margin-left: 2rem;
   display: grid;
   grid-template-columns: 25% 35% 15% 25%;
   grid-template-rows: 10% 15% 45% 30%;
@@ -13,18 +15,21 @@
 
   .item-1 {
     grid-area: 3 / 1 / 3 / 3;
+    @media screen and (max-width: 768px) {
+      margin: 20px 0;
+    }
   }
 
   .item-2 {
-    line-height: 1.3;
     grid-area: 4 / 1 / 4 / 3;
   }
 }
 
+// Second grid is the first content container after the flex banner, aka the solid background container
 .grid-2 {
   @include container;
-  @include grid-off;
-  margin-left: 2%;
+  @include grid-off; /* This only applies to lower screen resolutions, starting at tablets */
+  margin-left: 2rem;
   display: grid;
   grid-template-columns: 25% 35% 15% 25%;
   grid-template-rows: 10% 15% 20% 55%;
@@ -35,9 +40,14 @@
   }
   .item-3 {
     grid-area: 3 / 1 / 3 / 3;
+    @media screen and (max-width: 768px) {
+      margin: 20px 0;
+    }
   }
   .item-4 {
-    line-height: 1.3;
     grid-area: 4 / 1 / 4 / 3;
+    @media screen and (min-width: 768px) {
+      line-height: 40px;
+    }
   }
 }

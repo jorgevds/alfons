@@ -1,19 +1,20 @@
-// DOCTYPE partial scss
+// DOCTYPE partial scss: pages
 
 .over-ons {
   text-align: center;
-  padding: 4%;
+  padding: 3rem;
 
   img {
     width: 35%;
     height: auto;
     position: relative;
     display: block;
-    padding: 0% 3%;
+    margin: 0 3rem;
   }
 
   h1 {
     font-size: 4rem;
+    font-weight: 300;
     padding-bottom: 1.5rem;
     @media screen and (max-width: 425px) {
       font-size: 3rem;
@@ -25,9 +26,11 @@
     padding-bottom: 2.5rem;
 
     h2 {
+      font-weight: 100;
       padding-bottom: 2rem;
     }
   }
+
   .over-ons-2 {
     h3 {
       text-align: left;

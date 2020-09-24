@@ -1,3 +1,4 @@
+// DOCTYPE partial scss: components
 header {
   @include four-kay-headers;
   letter-spacing: 4px;
@@ -7,6 +8,7 @@ header {
 
   h1 {
     margin: 0;
+    font-weight: 200;
   }
 
   nav {
@@ -19,9 +21,9 @@ header {
         margin: auto;
         display: inline-block;
         padding: 20px;
-        width: 100%;
         @include four-kay-text;
         @media screen and (max-width: 425px) {
+          width: 100%;
           padding: 10px 0;
         }
       }
@@ -48,7 +50,7 @@ footer {
       }
 
       li {
-        font: 400 20px "Playball", Arial, Helvetica, sans-serif;
+        font: 100 20px "Playball", Arial, Helvetica, sans-serif;
         display: inline-block;
         padding: 8px 0;
         margin: auto;

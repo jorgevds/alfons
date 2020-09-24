@@ -305,6 +305,7 @@ template {
 
 .leidende-tekst {
   font-family: "Playball", Arial, Helvetica, sans-serif;
+  font-weight: 100;
   color: #c69a0c;
   text-shadow: 3px 3px 3px black; }
   @media screen and (max-width: 2560px) {
@@ -352,57 +353,65 @@ template {
       font-size: 1rem; } }
 
 .grid-1 {
-  font-size: 2.2em;
   min-height: 90vh;
   width: 100%;
   max-width: 100%;
-  margin-left: 2%;
+  /* This only applies to lower screen resolutions, starting at tablets */
+  margin-left: 2rem;
   display: grid;
   grid-template-columns: 25% 35% 15% 25%;
   grid-template-rows: 10% 15% 45% 30%; }
   @media screen and (max-width: 768px) {
     .grid-1 {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 20% 0;
-      margin: 0;
-      line-height: 3; } }
+      margin: 0; } }
   .grid-1 .full-row-1 {
     grid-column: 1 / -1;
     grid-row: 2/ -2; }
   .grid-1 .item-1 {
     grid-area: 3 / 1 / 3 / 3; }
+    @media screen and (max-width: 768px) {
+      .grid-1 .item-1 {
+        margin: 20px 0; } }
   .grid-1 .item-2 {
-    line-height: 1.3;
     grid-area: 4 / 1 / 4 / 3; }
 
 .grid-2 {
-  font-size: 2.2em;
   min-height: 90vh;
   width: 100%;
   max-width: 100%;
-  margin-left: 2%;
+  /* This only applies to lower screen resolutions, starting at tablets */
+  margin-left: 2rem;
   display: grid;
   grid-template-columns: 25% 35% 15% 25%;
   grid-template-rows: 10% 15% 20% 55%; }
   @media screen and (max-width: 768px) {
     .grid-2 {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 20% 0;
-      margin: 0;
-      line-height: 3; } }
+      margin: 0; } }
   .grid-2 .full-row-2 {
     grid-column: 1 / -1;
     grid-row: 2 / 2; }
   .grid-2 .item-3 {
     grid-area: 3 / 1 / 3 / 3; }
+    @media screen and (max-width: 768px) {
+      .grid-2 .item-3 {
+        margin: 20px 0; } }
   .grid-2 .item-4 {
-    line-height: 1.3;
     grid-area: 4 / 1 / 4 / 3; }
+    @media screen and (min-width: 768px) {
+      .grid-2 .item-4 {
+        line-height: 40px; } }
 
 .flex-1 {
-  font-size: 2.2em;
   min-height: 90vh;
   width: 100%;
   max-width: 100%;
@@ -440,8 +449,7 @@ template {
           text-align: center; } }
 
 .flex-banner {
-  margin-top: 10%;
-  position: inline-block; }
+  margin-top: 4rem; }
   .flex-banner .banner {
     background: #300e03;
     padding: 40px 20px;
@@ -452,29 +460,34 @@ template {
     @media screen and (max-width: 768px) {
       .flex-banner .banner {
         padding: 15px 20px; } }
-  .flex-banner .flex-2 {
-    font-size: 2.2em;
-    min-height: 90vh;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 2rem; }
+
+.flex-2 {
+  min-height: 90vh;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2rem; }
+  @media screen and (max-width: 768px) {
+    .flex-2 {
+      display: inline-block;
+      text-align: center;
+      margin: 0;
+      padding: 5px; } }
+  .flex-2 .column-2 {
+    margin-right: 8rem; }
     @media screen and (max-width: 768px) {
-      .flex-banner .flex-2 {
-        display: inline-block;
-        text-align: center;
-        margin: 0;
-        padding: 5; } }
-    .flex-banner .flex-2 .column-2 {
-      margin-right: 8rem; }
-      @media screen and (max-width: 768px) {
-        .flex-banner .flex-2 .column-2 {
-          margin: auto;
-          margin-top: 4rem; } }
-      .flex-banner .flex-2 .column-2 #flex-4 {
-        margin-bottom: 3rem; }
+      .flex-2 .column-2 {
+        margin: auto;
+        margin-top: 4rem; } }
+    .flex-2 .column-2 h3 {
+      margin-bottom: 3rem; }
+    .flex-2 .column-2 h5 {
+      font-size: 2rem;
+      margin-bottom: 24px; }
+    .flex-2 .column-2 p {
+      font-weight: 600; }
 
 * {
   box-sizing: border-box;
@@ -501,6 +514,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* I really love this mixin, really proud of it */
   background-image: url("../img/flex.jpg"); }
 
 button {
@@ -512,11 +526,84 @@ button {
   cursor: pointer; }
   @media screen and (max-width: 768px) {
     button {
-      margin-top: 8%;
+      margin-top: 3rem;
       background-color: #300e03;
       width: 50%; } }
 
-#foto-1 {
+.form {
+  padding: 20px 10px;
+  border-radius: 5px;
+  text-align: left;
+  display: inline-block;
+  height: auto;
+  width: 65%;
+  font-family: "Playball", Arial, Helvetica, sans-serif;
+  color: #c69a0c; }
+  @media screen and (max-width: 2560px) {
+    .form {
+      font-size: 2.8rem; } }
+  @media screen and (max-width: 1600px) {
+    .form {
+      font-size: 1.5rem; } }
+  @media screen and (max-width: 1024px) {
+    .form {
+      font-size: 1.2rem; } }
+  @media screen and (max-width: 425px) {
+    .form {
+      font-size: 1rem; } }
+  .form .form-input {
+    border-radius: 4px;
+    background-color: #300e03; }
+    @media screen and (max-width: 2560px) {
+      .form .form-input {
+        padding: 25px 20px; } }
+    @media screen and (max-width: 1600px) {
+      .form .form-input {
+        padding: 20px 10px; } }
+    .form .form-input label {
+      font-size: 1.3rem; }
+    .form .form-input input[type="text"],
+    .form .form-input input[type="email"],
+    .form .form-input textarea {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 12px 0 25px 0;
+      font-size: inherit; }
+      @media screen and (max-width: 768px) {
+        .form .form-input input[type="text"],
+        .form .form-input input[type="email"],
+        .form .form-input textarea {
+          padding: 10px 15px;
+          margin-top: 12px; } }
+    .form .form-input textarea {
+      height: 30vh;
+      resize: inherit;
+      font-size: inherit; }
+      @media screen and (max-width: 768px) {
+        .form .form-input textarea {
+          margin-bottom: 0; } }
+  .form input[type="submit"] {
+    font-size: 1.7rem;
+    background-color: #300e03;
+    color: #c69a0c;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c69a0c;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-family: inherit; }
+    @media screen and (max-width: 768px) {
+      .form input[type="submit"] {
+        font-size: 1rem;
+        overflow: visible; } }
+
+.fotos {
   width: 90%;
   height: auto;
   border: 1px solid #ffe0b3; }
@@ -545,7 +632,8 @@ header {
     header {
       font-size: 1.5rem; } }
   header h1 {
-    margin: 0; }
+    margin: 0;
+    font-weight: 200; }
   header nav {
     border-bottom: 12px double #ffe0b3; }
     header nav ul {
@@ -553,8 +641,7 @@ header {
       header nav ul li {
         margin: auto;
         display: inline-block;
-        padding: 20px;
-        width: 100%; }
+        padding: 20px; }
         @media screen and (max-width: 2560px) {
           header nav ul li {
             font-size: 2.8rem; } }
@@ -569,6 +656,7 @@ header {
             font-size: 1rem; } }
         @media screen and (max-width: 425px) {
           header nav ul li {
+            width: 100%;
             padding: 10px 0; } }
       header nav ul li a {
         color: #c69a0c;
@@ -584,7 +672,7 @@ footer {
       footer nav ul {
         display: flex; } }
     footer nav ul li {
-      font: 400 20px "Playball", Arial, Helvetica, sans-serif;
+      font: 100 20px "Playball", Arial, Helvetica, sans-serif;
       display: inline-block;
       padding: 8px 0;
       margin: auto;
@@ -619,78 +707,6 @@ footer {
 
 .contact-form {
   margin-top: 2rem; }
-  .contact-form .form {
-    padding: 20px 10px;
-    border-radius: 5px;
-    text-align: left;
-    display: inline-block;
-    height: auto;
-    width: 65%;
-    font-family: "Playball", Arial, Helvetica, sans-serif;
-    color: #c69a0c; }
-    @media screen and (max-width: 2560px) {
-      .contact-form .form {
-        font-size: 2.8rem; } }
-    @media screen and (max-width: 1600px) {
-      .contact-form .form {
-        font-size: 1.5rem; } }
-    @media screen and (max-width: 1024px) {
-      .contact-form .form {
-        font-size: 1.2rem; } }
-    @media screen and (max-width: 425px) {
-      .contact-form .form {
-        font-size: 1rem; } }
-    .contact-form .form .form-input {
-      border-radius: 4px;
-      background-color: #300e03; }
-      @media screen and (max-width: 2560px) {
-        .contact-form .form .form-input {
-          padding: 25px 20px; } }
-      @media screen and (max-width: 1600px) {
-        .contact-form .form .form-input {
-          padding: 20px 10px; } }
-      .contact-form .form .form-input label {
-        font-size: 1.3rem; }
-      .contact-form .form .form-input input[type="text"],
-      .contact-form .form .form-input input[type="email"],
-      .contact-form .form .form-input textarea {
-        display: inline-block;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin: 12px 0 25px 0;
-        font-size: inherit; }
-        @media screen and (max-width: 768px) {
-          .contact-form .form .form-input input[type="text"],
-          .contact-form .form .form-input input[type="email"],
-          .contact-form .form .form-input textarea {
-            padding: 10px 15px;
-            margin-top: 8; } }
-      .contact-form .form .form-input textarea {
-        height: 30vh;
-        resize: inherit;
-        font-size: inherit; }
-        @media screen and (max-width: 768px) {
-          .contact-form .form .form-input textarea {
-            margin-bottom: 0; } }
-    .contact-form .form input[type="submit"] {
-      font-size: 1.7rem;
-      background-color: #300e03;
-      color: #c69a0c;
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #c69a0c;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 5%;
-      margin-bottom: 20%;
-      font-family: inherit; }
-      @media screen and (max-width: 768px) {
-        .contact-form .form input[type="submit"] {
-          font-size: 1rem;
-          overflow: visible; } }
 
 .card-container {
   display: grid;
@@ -699,7 +715,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 4%; }
+  padding: 2rem; }
   @media screen and (max-width: 425px) {
     .card-container {
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); } }
@@ -711,7 +727,7 @@ footer {
     min-height: 100vh;
     height: auto;
     margin: 0;
-    margin-bottom: 2%;
+    margin-bottom: 1rem;
     background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 6px;
@@ -784,15 +800,16 @@ footer {
 
 .over-ons {
   text-align: center;
-  padding: 4%; }
+  padding: 3rem; }
   .over-ons img {
     width: 35%;
     height: auto;
     position: relative;
     display: block;
-    padding: 0% 3%; }
+    margin: 0 3rem; }
   .over-ons h1 {
     font-size: 4rem;
+    font-weight: 300;
     padding-bottom: 1.5rem; }
     @media screen and (max-width: 425px) {
       .over-ons h1 {
@@ -802,6 +819,7 @@ footer {
     padding-bottom: 2.5rem; }
     .over-ons .over-ons-2 h2,
     .over-ons .over-ons-3 h2 {
+      font-weight: 100;
       padding-bottom: 2rem; }
   .over-ons .over-ons-2 h3 {
     text-align: left; }

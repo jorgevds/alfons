@@ -1,9 +1,12 @@
+// DOCTYPE partial scss: layout
+// This one is for the first grid container
 .parallax-1 {
   @include parallax(90vh);
   background-image: url("../img/grid.jpg");
 }
 
+// This one is for the second grid and final flex container, hence the height is different
 .parallax-2 {
-  @include parallax(auto);
+  @include parallax(auto); /* I really love this mixin, really proud of it */
   background-image: url("../img/flex.jpg");
 }

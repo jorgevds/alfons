@@ -1,3 +1,5 @@
+// DOCTYPE partial scss: components
+// For the button on the main page that links to the contact page
 button {
   background-color: transparent;
   color: $gold;
@@ -6,9 +8,8 @@ button {
   border-radius: 4px;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    margin-top: 8%;
+    margin-top: 3rem;
     background-color: $brown;
     width: 50%;
   }
 }
-// give btn class
