@@ -60,7 +60,7 @@ All in all, a project that provided for multiple learning experiences, and even 
 
 - [ ] First, there's lot of stuff that's kind of thrown in. Most obvious perhaps is the random php file that I originally intended would handle all form information and submissions. Poor old me had no clue then just how much more complex doing contact forms really was, and so I have since abandoned that cause. Probably if I were to revisit, I would either hook it up to Firebase for ease of use, or simply remove it and keep the contact form as a placeholder. There for looks, but not operational. 
 
-- [ ] Second, I would want to maybe experiment with smooth scrolling and fadein content on the main page. That seems like a useful trick I should learn. Maybe in a next project.
+- [ ] Second, I would want to maybe experiment with smooth scrolling and fade in-content on the main page. That seems like a useful trick I should learn. Maybe in a next project.
 
 - [ ] Third, related to one, I would want to finish the PWA setup and make the order page an actual PWA. Then I could download it to my phone and giggle to myself. Some of the parts are already in there, but I think it's not actually quite set up yet.
 
