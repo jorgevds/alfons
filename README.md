@@ -48,7 +48,7 @@ Here this mixin is applied to two different backgrounds. One has a fixed value o
 Lastly, I toyed with the idea of having an order page as I finished up the design of the website. To that effect, I made my first JavaScript file for a project. Before, I had only done HTML/CSS exclusively, save for an early React project I had coded along with. This code does little more than inject data into the order page to make it more dynamic and easier to manage. It works very similarly to a React project where you would write a Card component with certain props as values in place of static HTML elements.
 
 ![Koffiekoeken](https://user-images.githubusercontent.com/54646908/104959017-889d9e00-59d1-11eb-8c9f-c1f0374bba37.png)
-###### Koffiekoeken 
+###### Koffiekoeken :doughnut:
 
 Not quite a .map; I wasn't ready for functional programming just yet. I learned this code from a freeCodeCamp tutorial on building a PWA (https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/). I modified the code to fit my needs, and daresay I optimised the images for performance. Very useful tutorial nonetheless.
 
