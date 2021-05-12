@@ -31,7 +31,7 @@ Partial files house only a couple dozen lines of Sass code in this project, give
 
 ### Time to get abstract
 
-Above, I mention @include lines. These are essentially the inline form of import statements. These imports apply the predefined set of rules, or mixin, to the class that you want. Mixins are a feature of Sass, and reinforce the practice of seperating your concerns. Having all this code preset in its own partial allows you to read and/or modify the mixin in a safe and clear environment. And @include statements allow you to reuse these blocks of code in other partials for other classes, which is a lot more readable than having classes for different elements all bunched up together to then all receive 5 lines of code you want them all to share.
+Above, I mention @include lines. These are essentially the inline form of import statements. These imports apply the predefined set of rules, or mixin, to the class that you want. Mixins are a feature of Sass, and reinforce the practice of separating your concerns. Having all this code preset in its own partial allows you to read and/or modify the mixin in a safe and clear environment. And @include statements allow you to reuse these blocks of code in other partials for other classes, which is a lot more readable than having classes for different elements all bunched up together to then all receive 5 lines of code you want them all to share.
 
 ![Fun with abstracts](https://user-images.githubusercontent.com/54646908/104959030-8c312500-59d1-11eb-825f-d23de616301f.png)
 ###### Fun with abstracts :crystal_ball:
